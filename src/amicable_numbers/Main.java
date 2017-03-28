@@ -3,6 +3,8 @@ package amicable_numbers;
 import java.util.HashMap;
 import java.util.Map;
 
+import static utils.Utils.getDivisorSum;
+
 /**
  * Created by Nick on 3/27/2017.
  */
@@ -10,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         Map<Integer, Integer> sums = new HashMap<>();
         for (int i = 1; i < 10000; i++) {
-            sums.put(i, findDivisorSum(i));
+            sums.put(i, getDivisorSum(i));
         }
 
         int sum = 0;
@@ -26,11 +28,5 @@ public class Main {
         System.out.println(sum);
     }
 
-    private static Integer findDivisorSum(int number) {
-        int sum = 0;
-        for (int i = 1; i < number / 2 + 1; i++) {
-            if (number % i == 0) sum += i;
-        }
-        return sum;
-    }
+
 }
