@@ -1,5 +1,6 @@
 package utils;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,5 +22,9 @@ public class Utils {
             if (number % i == 0) sum += i;
         }
         return sum;
+    }
+
+    public static boolean isPrime(long number) {
+        return new BigInteger(number + "").isProbablePrime(5);
     }
 }
