@@ -27,4 +27,31 @@ public class Utils {
     public static boolean isPrime(long number) {
         return new BigInteger(number + "").isProbablePrime(5);
     }
+
+    public static void printGrid(long[][] grid, int size) {
+        for (int i = 0; i < size; i++) {
+            System.out.println();
+            for (int j = 0; j < size; j++) {
+                System.out.print(grid[i][j] + " ");
+            }
+        }
+    }
+
+    public static void printSwitchedGrid(long[][] grid, int size) {
+        for (int i = 0; i < size; i++) {
+            System.out.println();
+            for (int j = 0; j < size; j++) {
+                System.out.print(grid[j][i] + " ");
+            }
+        }
+    }
+
+    public static void printGrid(int[][] grid, int size) {
+        for (int i = 0; i < size; i++) {
+            System.out.println();
+            for (int j = 0; j < size; j++) {
+                System.out.print(grid[i][j] + " ");
+            }
+        }
+    }
 }
